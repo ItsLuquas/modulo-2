@@ -730,44 +730,143 @@ for i in range(5):
     a2 = int(input("Digite a nota: "))
     a1.append(a2)
 
-a3 = sum(a1) / len(a1)  # ou / 5
+a3 = sum(a1) / len(a1)
 print("A média é:", a3)
 
 # Tarefa 87
+a1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+a2 = []
+
+for a3 in a1:
+    if (a3 % 2 == 0):
+        a2.append(a3)
+
+print(a2)
+
+print(a3)
 
 # Tarefa 88
+a1 = ["Lucas", "Davi", "Bruno", "Gustavo", "César"]
 
+a2 = input("Digite um nome para remover: ")
+
+if (a2 in a1):
+
+    a1.remove(a2)
+    print("Lista atualizada: " ,a1)
+
+else:
+
+    print("Tal nome não está na lista.")
 
 # Tarefa 89
-
+a1 = []
+for i in range(5):
+    a2 = input("Digite um item: ")
+    a1.append(a2)
+a3 = input("Pesquise um item: ")
+if (a3 in a1):
+    print("Item registrado.")
+else:
+    print("Item não encontrado.")
 
 # Tarefa 90
-
+a1 = []
+for i in range(6):
+    numero = int(input("Insira um número: "))
+    a1.append(numero)
+a1.sort()
+print("Ordem crescente", a1)
+a1.sort(reverse=True)
+print("Ordem decrescente:", a1)
 
 # Tarefa 91
-
+a1 = []
+for i in range(10):
+    a2 = int(input("Insira um número: "))
+    a1.append(a2)
+a3 = set(a1)
+print(a3)
 
 # Tarefa 92
-
+a1 = {1, 2, 3, 10, 13, 33, 44, 67}
+a2 = {3, 5, 6, 7, 12, 13, 54, 67}
+a3 = a1 & a2
+print(sorted(a3))
 
 # Tarefa 93
-
+a1 = (20 , 80)
+print("X's valores iguais: ", a1[0])
+print("Y's valores iguais: ", a1[1])
 
 # Tarefa 94
+a1 = {
+    "Nome": "Lucas",
+    "Idade": 18,
+    "Cidade": "Uberlândia, MG"
+}
 
+print("Meu nome é ", a1["Nome"], ", eu moro em ", a1["Cidade"], " e tenho ", a1["Idade"], " anos.")
 
 # Tarefa 95
-
+a1 = []
+a2 = input("Digite seu nome: ")
+for i in range(2):
+    a3 = int(input("Digite sua nota: "))
+    a1.append(a3)
+a2 = {
+    "Nome": a2,
+    "Notas": a1
+}
+a2["Média"] = (a1[0] + a1[1]) / 2
+print(a2)
 
 # Tarefa 96
-
+a1 = []
+a2 = {
+    "Nome": "PS5", "Preço": "4.600",
+}
+a1.append(a2)
+a3 = {
+    "Nome": "GTA6 standart", "Preço": "449.90",
+}
+a1.append(a3)
+a4 = {
+    "Nome": "Outro Negócio", "Preço": "549.90",
+}
+a1.append(a4)
+print(a1)
 
 # Tarefa 97
-
+a1 = 0
+a2 = [
+    {"Nome": "Switch 2", "Preço": 4.000},
+    {"Nome": "Ocarina of Time remake", "Preço": 329.90},
+    {"Nome": "Ocarina oficial", "Preço": 270.00},
+]
+for i in a2:
+    if i["Preço"] > a1:
+        a1 = i["Preço"]
+print(a1)
 
 # Tarefa 98
-
+a1 = [
+    {"Lucas": 34991292027},
+    {"Bruno": 3491000109},
+    {"Mateus": 3484107682}
+]
+a2 = input("De quem você quer o número?: ")
+have = False
+for i in a1:
+    if a2 in i:
+        print(i[a2])
+        have = True
+        break
+    else:
+        have = False
+if (have == False):
+    print("O sistema não possui esse número.")
 
 # Tarefa 99
 
